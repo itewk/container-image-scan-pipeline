@@ -1,8 +1,8 @@
 // Load the Ploigos Jenkins Library
-library identifier: 'ploigos-jenkins-library@main',
+library identifier: 'ploigos-jenkins-library@feature/existing-container-scan',
 retriever: modernSCM([
     $class: 'GitSCMSource',
-    remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
+    remote: 'https://github.com/itewk/ploigos-jenkins-library.git'
 ])
 
 // run the pipeline
