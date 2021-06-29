@@ -1,5 +1,8 @@
 ---
 step-runner-config:
+  config-decryptors:
+  - implementer: SOPS
+
   container-image-static-compliance-scan:
   # sample scans using DataStream file (preferred)
   - name: OpenSCAP - Compliance - Example Compliance Profile for UBI8 Container Images [Based on xccdf_org.ssgproject.content_profile_standard]
