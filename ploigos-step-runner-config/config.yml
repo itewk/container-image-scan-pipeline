@@ -15,3 +15,11 @@ step-runner-config:
     implementer: OpenSCAP
     config:
       oscap-input-definitions-uri: https://www.redhat.com/security/data/metrics/ds/v2/RHEL8/rhel-8.ds.xml.bz2
+
+  report:
+  - name: Generate and Push Results Report
+    implementer: ResultArtifactsArchive
+    config:
+      results-archive-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-result-artifacts-archives
+      results-archive-destination-username: tssc
+
