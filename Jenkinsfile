@@ -19,7 +19,7 @@ ploigosWorkflowExistingContainerImageScan(
     workflowWorkersImagePullPolicy: 'Always',
 
     stepRunnerUpdateLibrary: true,
-    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/use-local-container-storage-refactor',
+    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/continue-sub-steps-on-failure-option',
 
     registryURL: params.registryRUL,
     imageOrg: params.imageOrg,
