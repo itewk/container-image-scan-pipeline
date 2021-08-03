@@ -4,15 +4,13 @@ step-runner-config:
   - implementer: SOPS
 
   container-image-static-compliance-scan:
-  # sample scans using DataStream file (preferred)
-  - name: OpenSCAP - Compliance - Example Compliance Profile for UBI8 Container Images [Based on xccdf_org.ssgproject.content_profile_standard]
+  - name: OpenSCAP - Compliance - SSG RHEL8
     implementer: OpenSCAP
     config:
       oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
       oscap-profile: xccdf_org.ssgproject.content_profile_standard
 
   container-image-static-vulnerability-scan:
-  # sample vulnerability scan using XCCDF file (preferred)
   - name: OpenSCAP - Vulnerability - DataStream
     implementer: OpenSCAP
     config:
@@ -22,6 +20,5 @@ step-runner-config:
   - name: Generate and Push Results Report
     implementer: ResultArtifactsArchive
     config:
-      results-archive-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-result-artifacts-archives
-      results-archive-destination-username: tssc
-
+      results-archive-destination-url: https://nexus.apps.tssc.rht-set.com/repository/release-engineering-workflow-result-artifacts-archives/
+      results-archive-destination-username: sa-ploigos-ref-apps
