@@ -4,11 +4,41 @@ step-runner-config:
   - implementer: SOPS
 
   container-image-static-compliance-scan:
-  - name: OpenSCAP - Compliance - SSG RHEL8
+  - name: OpenSCAP - Compliance - SSG CIS
+    implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
+      oscap-profile: xccdf_org.ssgproject.content_profile_cis
+  - name: OpenSCAP - Compliance - SSG STIG
+    implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
+      oscap-profile: xccdf_org.ssgproject.content_profile_rhelh-stig
+  - name: OpenSCAP - Compliance - SSG Standard
     implementer: OpenSCAP
     config:
       oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
       oscap-profile: xccdf_org.ssgproject.content_profile_standard
+  - name: OpenSCAP - Compliance - SSG CJIS
+    implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
+      oscap-profile: xccdf_org.ssgproject.content_profile_cjis
+  - name: OpenSCAP - Compliance - SSG CUI
+    implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
+      oscap-profile: xccdf_org.ssgproject.content_profile_cui
+  - name: OpenSCAP - Compliance - SSG HIPPA
+    implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
+      oscap-profile: xccdf_org.ssgproject.content_profile_hipaa
+  - name: OpenSCAP - Compliance - SSG PIC DSS
+    implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://atopathways.redhatgov.io/compliance-as-code/scap/ssg-rhel8-ds.xml
+      oscap-profile: xccdf_org.ssgproject.content_profile_pci-dss
 
   container-image-static-vulnerability-scan:
   - name: OpenSCAP - Vulnerability - DataStream
