@@ -1,8 +1,8 @@
 // Load the Ploigos Jenkins Library
-library identifier: 'ploigos-jenkins-library@feature/use-local-container-storage-refactor',
+library identifier: 'ploigos-jenkins-library@main',
 retriever: modernSCM([
     $class: 'GitSCMSource',
-    remote: 'https://github.com/itewk/ploigos-jenkins-library.git'
+    remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
 ])
 
 // run the pipeline
@@ -19,7 +19,7 @@ ploigosWorkflowExistingContainerImageScan(
     workflowWorkersImagePullPolicy: 'Always',
 
     stepRunnerUpdateLibrary: true,
-    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/continue-sub-steps-on-failure-option',
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main',
 
     registryURL: params.registryRUL,
     imageOrg: params.imageOrg,
